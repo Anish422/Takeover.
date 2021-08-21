@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600&display=swap');
+    </style>
+</head>   
+
+<div class = "topnav">
+    <a href="index.html">
+    <img class = "logo" src="resources/CourtVision.png" alt="logo">
+    <h1 class = "name"> TAKEOVER.</h1> 
+    </a>
+    <span class = "user" id = "username"></span>
+   
+</div>
+
+
+
+<div class = "info" >
+
+    <div class = "info_text">
+        
+   <h1>Playing Basketball Made Simple.</h1>
+        <h2><ul class = "info_text_2">
+            <li>Find Available Courts Near You</li>
+            <li>Find Other Players</li>
+            <li>Rate Courts</li>
+            </ul>
+        </h2>
+        <button class = "button" onclick="window.location.href='/map.html'">Find Now</button>
+        <button class = "button2" onclick="signIn();">Sign In</button>
+    </div>
+
+    <div id ="signIn" class = "signIn" style=" display: none;">
+        <form class="courtInput" method="POST">
+        <input type="text" name="user_name" id="user_name" accept="text/*" placeholder="Username:">
+        <input type="text" name="password" id="password" accept="text/*" placeholder="Password:">
+    </form>
+    <button id = "enterButton" onclick="submitSignIn();">Submit</button>
+    <h1 class = "signUp"><a href=""> New? Sign Up Here.</a></h1>
+ </div> 
+
+ <div class = "devices"> 
+     <img  class = "devicesImg" src="/resources/Takeover..png" alt="devices">
+ </div>
+ 
+ <script src="index.js"></script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="map.css">
+
+<div class = "topnav">
+    <a href="index.html">
+    <img class = "logo" src="resources/CourtVision.png" alt="logo">
+    <h1 class = "name">TAKEOVER.</h1>
+    </a>
+    <span class = "user" id = "username">@anish422</span>
+</div>
+
+<div class = "findYourCourt"><h1>Find YOUR Court.</h1></div>
+<div id ="map"></div>
+
+<script src="map.js"></script>
+<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB7LwTF7onZs09_pF-IqydmVKktIc4m3zI&callback=initMap"></script>
+<script src="map.js"></script>
+
+<div><button class = "add" onclick="addNew();"> + Add Court</button></div>
+
+<div id ="addNew" class = "addNew" style=" display: none;">
+<form class="courtInput" method="POST">
+<label for="img">Upload Image:</label>
+<input type="file" name="img" id="img" accept="image/*">
+<input type="text" name="name" id="name" accept="text/*" placeholder="Enter Court Name">
+<input type="text" name="address" id="address" accept="text/*" placeholder="Enter Address">
+</form>
+<button id = "enterButton" onclick="submitCourt();">Submit</button>
+<button id = "closeButton"  onclick="closeAdd();">Exit</button>
+</div>
+
+<div id ="openInfo" class = "openInfo" style=" display: none;">
+    <img class = "courtImg"src="/resources/canstockphoto0038365.jpg" alt="">
+    <span id = "name2"></span>
+    <span id = "address2"></span>
+    <ul class = "stars">
+        <li><a id = "star1" onclick="star1();">★</a></li>
+        <li><a id = "star2" onclick="star2();">★</a></li>
+        <li><a id = "star3" onclick="star3();">★</a></li>
+        <li><a id = "star4" onclick="star4();">★</a></li>
+        <li><a id = "star5" onclick="star5();">★</a></li>
+    </ul>
+    <button id = "closeButton2"  onclick="closeAdd2();">Exit</button>
+     <button id = "ImHere"  onclick="ImHereChange ();">I'm Here</button> 
+   <button id = "courtStatus"  onclick="courtStatusChange();">Court Available</button>
+    
+<div id = "dropdown" class = "dropdown" style="float: right;">
+  <button class = "dropBTN">▽</button>
+    <div id = "dropdownList" class = "dropdownNames" style="right: 0;">
+    <a href="" style=" display: none;" id = "userHere"><span id = "userSpan"></span></a>
+    <a href="">@james716</a>
+    <a href="">@baller91</a>
+    <a href="">@hoops4days</a>
+    <a href="">@jordan23</a>
+    </div>
+</div>
+
+</div>
+
+</head>   
